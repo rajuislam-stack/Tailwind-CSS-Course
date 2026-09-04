@@ -1,0 +1,37 @@
+/* Chapter-07: TailwindCSS Functions & Directives */
+
+/* Directives */
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+ --spacing-m-p-2:8px;
+ --shadow-my-shadow:2px 4px 15px blue;
+ --shadow-dark-shadow:2px 5px 20px purple;
+ --radius-my-rounded:8px;
+ --color-my-bg: dark;
+
+ --color-brand-400: pink;
+ --spacing-brand-8: 8px;
+ --color-brand-dark: green;
+};
+
+
+/* Functions */
+
+.card{
+  margin: theme(--spacing-m-p-2);
+  padding: theme(--spacing-m-p-2);
+  box-shadow: theme(--shadow-my-shadow);
+  border-radius: theme(--radius-my-rounded);
+  color: theme(--color-brand-400);
+}
+
+/* @media screen(sm){
+  .card{
+    text-color:red;
+  }
+} */

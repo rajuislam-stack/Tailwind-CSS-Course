@@ -1,0 +1,41 @@
+/*Directives and functions in tailwindcss*/
+
+@import 'tailwindcss'; 
+
+@theme{
+  --color-mycolor-400: #6D214F;
+  --spacing-myspace-400:14px;
+  --color-mytext-400:#FC427B; 
+  --text-mylergeText:50px;
+
+  --color-my-card-bg: white;
+  --color-my-card-responsive: purple;
+  --shadow-my-card-shadow: 2px 3px 40px;
+  --spacing-my-card-spacing: 18px;
+  --radius-my-card-rounded:4px;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* //Note: Here, @import , @theme, @custom-variant these are directives */
+
+
+
+.card{
+  /* background-color: theme('--color-my-card-bg'); */
+  box-shadow: theme("--shadow-my-card-shadow");
+  margin: theme("--spacing-my-card-spacing");
+  padding: theme('--spacing-my-card-spacing');
+  border-radius: theme("--radius-my-card-rounded");
+}
+
+
+
+/* @media screen(sm){
+  .card{
+    background-color:theme(" --color-my-card-responsive") (not supporting)
+  }
+} */         
+
+/* Note: Here theme() and screen() these are functions in TailwindCSS */

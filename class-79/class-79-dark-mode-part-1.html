@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class-79//Topics: Dark & Light Mode, Directives, Functions </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode:'class'
+    }
+  </script>
+</head>
+<body class="flex flex-col gap-2 bg-red-100 justify-center items-center h-screen dark:bg-gray-900">
+
+  <!-- //Chapter-6: Dark and Light mode in Tailwindcss (Part-1)-->
+
+   <div class="bg-white text-xl max-w-sm h-40 flex justify-center items-center shadow-xl rounded p-4 dark:bg-blue-900 dark:text-white dark:hover:bg-red-200">
+    This is Dark and Light Mood
+   </div> 
+   <input type="text" placeholder="Enter your name" class="pl-1 dark:focus:outline-none dark:focus:ring-2 dark:focus:ring-red-400 rounded focus:dark:bg-red-100">
+
+   <p class="dark:text-white">hello tailwind</p>
+
+
+   <!-- Note: go to the react project to see the last part of Dark or Light mode and functions and directive  -->
+    
+    
+</body>
+</html>
