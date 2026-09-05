@@ -1,0 +1,70 @@
+/* @apply & @layer Directives in TailwindCSS*/
+
+@import 'tailwindcss';
+
+/* @apply directive */
+
+
+.primary-btn{
+  @apply m-4 px-4 py-2 bg-white rounded-xl text-xl shadow-xl;
+}
+
+
+@layer components {
+
+  .primary-div{
+    @apply max-w-md bg-white shadow-2xl rounded p-4 m-4 md:max-w-xl md:text-green-500 flex justify-center items-center;
+  }
+
+   .alert-success{
+    @apply bg-green-300 text-green-600 p-4 m-4 rounded
+  }
+
+  .alert-error{
+    @apply bg-red-300 text-red-600 p-4 m-4 rounded 
+  }
+}
+
+
+
+/* @layer directive*/
+
+@layer base{
+  h1{
+    @apply text-xl  font-bold m-4;
+  }
+  p{
+    @apply text-sm font-light text-green-600 m-4
+  }
+}
+
+
+@layer components{
+  .button-style{
+    @apply bg-pink-50 px-4 py-2 rounded m-4 text-pink-700 shadow-xl hover:bg-pink-100
+  }
+}
+
+@layer utilities{
+  .shadow-me{
+    box-shadow: 3px 4px 15px rgb(124, 55, 106);
+  }
+
+  .my-text-bold{
+    @apply font-bold
+  }
+}
+
+
+/*Extra practice*/
+
+@theme{
+  --spacing-7: 7px;
+}
+
+@layer components {
+  .card{
+    @apply bg-red-950 text-violet-600 border m-4 rounded ;
+    padding:theme(--spacing-7);
+  }
+}
