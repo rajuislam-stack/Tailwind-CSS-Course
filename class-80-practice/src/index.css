@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+*{
+ margin: 4px;
+};
+
+/* //Apply direcitive */
+
+@layer components{
+
+  .primary-btn{
+    @apply bg-blue-200 rounded px-4 py-2 text-white shadow hover:bg-blue-300 disabled:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-green-300 focus:shadow-xl focus:shadow-pink-200 sm:bg-purple-200 md:bg-pink-300 lg:bg-green-400 xl:bg-red-400 2xl:bg-red-900;
+  }
+
+  .success-alert{
+    @apply bg-green-100 text-green-800 border-2 border-green-300 rounded px-3 py-2  
+  }
+
+  .error-alert{
+    @apply bg-red-100 text-red-800 border-2 border-red-300 px-3 py-2 rounded 
+  }
+
+  .btn-common-style{
+    @apply text-white rounded-md px-4 py-2 shadow md:px-6 focus:outline-none focus:ring-2 focus:ring-violet-700 font-semibold
+  }
+
+}
+
+
+/* //@layer directives */
+
+ /* Base layer */
+
+@layer base{
+  body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  h1{
+    @apply text-4xl font-extrabold
+  }
+
+
+  p{
+    @apply text-gray-700 leading-relaxed
+  }
+
+}
+
+
+/* Components layer */
+
+@layer components{
+  .btn-style{
+    @apply bg-green-100 font-bold text-green-800 rounded px-4 py-2 shadow hover:bg-green-200 
+  }
+}
+
+
+/* Utilities layer */
+
+
+@layer utilities{
+  .text-shadow{
+   text-shadow: 2px 4px 25px rgba(141, 17, 40, 0.8);
+  }
+
+}
+
+
+
+
+/* //Example: Using @layer to Add Custom Styles */
+
+
+@layer components {
+  .card{
+    @apply bg-white rounded shadow-xl p-4 hover:bg-red-500
+  }
+}
+
+@layer utilities{
+  .content-auto{
+    content-visibility:auto;
+  }
+}
+
+
+
+
+/* Practice Project: "Custom Blog Styles" */
+
+
+@layer base{
+  h2{
+    @apply font-extrabold text-4xl text-gray-900
+  }
+
+  p{
+    @apply text-gray-700 leading-relaxed
+  }
+
+  a{
+    @apply text-purple-400
+  }
+}
+
+
+@layer components {
+  .blog-card{
+    @apply bg-white rounded-xl shadow-xl px-8 py-4 hover:shadow-2xl transition-all ease-in-out ;
+  }
+}
+
+
+@layer utilities{
+  .text-grow{
+    text-shadow: 0 0 10px rgba(86, 68, 202, 0.7);
+  }
+}
