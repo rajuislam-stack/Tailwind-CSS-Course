@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+
+@utility input-focus{
+  @apply outline-none ring-2 shadow-2xl ring-green-500
+}
+
+@utility my-shadow{
+  box-shadow: 2px 4px 40px red;
+}
+
+
+/* Extra practice */
+
+@theme {
+  --padding-my-p: 30px;
+}
+
+
+@layer base{
+  body{
+    font-size:16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    background: url('img/page-background.avif') center fixed  no-repeat;
+
+    height: 100vh;
+    width: 100vw;
+  }
+  h1{
+    @apply text-3xl font-bold
+  }
+
+  input{
+   @apply border-2 rounded shadow
+  }
+}
+
+@layer components{
+  .login-form{
+    @apply mx-auto my-10 bg-white/10 backdrop-blur-md border border-white/20 flex flex-col items-center justify-around gap-2 rounded-xl shadow-xl min-h-120 max-w-sm;
+
+    /* padding:theme(--padding-my-p) */;
+    padding:var(--padding-my-p)
+  }
+
+  .input-style{
+    @apply w-full p-2 
+  }
+}
+
+
+
+@utility responsive-sm{
+  @apply min-w-md shadow-2xl
+}
